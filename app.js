@@ -18,16 +18,17 @@ getNumbersInRange(3, 8);  // [3, 4, 5, 6, 7, 8]
 // Return the sum of every integer from start to end, inclusive.
 // Use the accumulator pattern: let total = 0; total += i; each pass.
 
-/* function sumRange(start, end) {
-  for (let total = 0; total += i; i++) {
-    
+function sumRange(start, end) {
+  let total = 0
+  for (let i = start; i <= end; i++) {
+    total += i
   }
-
+  return(total)
 }
 
 console.log(sumRange(1, 5));   // 15
 console.log(sumRange(1, 100)); // 5050
-console.log(sumRange(4, 4));   // 4  */
+console.log(sumRange(4, 4));   // 4 
 
 // ---------- Problem 3: Countdown ----------
 // Return an array counting down from n to 1.
@@ -51,21 +52,39 @@ countdown(8); // [8, 7, 6, 5, 4, 3, 2, 1] */
 // Loop through every index of the string and use an if statement to
 // check whether that character is a vowel. Access a character with
 // str[i] or str.charAt(i).
-/* let vowels = "aeiou"
-for (let i = 0; i < vowels.length; i++) {
-  console.log(vowels[i]);
-}
-console.log(vowels.includes(""));
+
 
 function countVowels(str) {
-   */
+  String.str = str
+  let vowels = "aeiou"
+  for (let i = 0; i <= vowels.length; i++) {
+    if ((vowels.[i]) === true) {
+      i += 1
+    }
+    return(i)
   
-  
-/* 
-} */
+}
 
-/* console.log(countVowels("hello"));      // 2
+  
+
+} 
+
+console.log(countVowels("hello"));      // 2
 console.log(countVowels("javascript")); // 3
 console.log(countVowels("xyz"));        // 0
 console.log(countVowels("aeiou"));      // 5
- */
+
+
+// ---------- Problem 5: Multiplication Table ----------
+// Return a string showing the multiplication table from 1 to n,
+// one row per line (rows separated by "\n"). Each row shows n
+// products separated by spaces. Needs a loop inside a loop —
+// build each row as its own string before adding it to the result.
+function multiplicationTable(n) {
+  
+
+}
+
+console.log(multiplicationTable(3));
+// "1 2 3\n2 4 6\n3 6 9"
+console.log(multiplicationTable(5));
