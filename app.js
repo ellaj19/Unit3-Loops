@@ -1,7 +1,7 @@
 // ---------- Problem 1: Range Builder ----------
 // Return an array of every integer from start to end, inclusive.
 // Use a for loop and .push() to build the array one number at a time.
-function getNumbersInRange(start, end) {
+/* function getNumbersInRange(start, end) {
   const result = []
   for (let i = start; i <= end; i++) {
     result.push(i)
@@ -11,14 +11,14 @@ function getNumbersInRange(start, end) {
 
 getNumbersInRange(1, 5);  // [1, 2, 3, 4, 5]
 getNumbersInRange(10, 10); // [10]
-getNumbersInRange(3, 8);  // [3, 4, 5, 6, 7, 8]
+getNumbersInRange(3, 8);  // [3, 4, 5, 6, 7, 8] */
 
 
 // ---------- Problem 2: Sum a Range ----------
 // Return the sum of every integer from start to end, inclusive.
 // Use the accumulator pattern: let total = 0; total += i; each pass.
 
-function sumRange(start, end) {
+/* function sumRange(start, end) {
   let total = 0
   for (let i = start; i <= end; i++) {
     total += i
@@ -29,7 +29,7 @@ function sumRange(start, end) {
 console.log(sumRange(1, 5));   // 15
 console.log(sumRange(1, 100)); // 5050
 console.log(sumRange(4, 4));   // 4 
-
+ */
 // ---------- Problem 3: Countdown ----------
 // Return an array counting down from n to 1.
 // Use a while loop, not a for loop.
@@ -54,11 +54,11 @@ countdown(8); // [8, 7, 6, 5, 4, 3, 2, 1] */
 // str[i] or str.charAt(i).
 
 
-function countVowels(str) {
+/* function countVowels(str) {
   String.str = str
   let vowels = "aeiou"
   for (let i = 0; i <= vowels.length; i++) {
-    if ((vowels.[i]) === true) {
+    if ()  {
       i += 1
     }
     return(i)
@@ -73,18 +73,48 @@ console.log(countVowels("hello"));      // 2
 console.log(countVowels("javascript")); // 3
 console.log(countVowels("xyz"));        // 0
 console.log(countVowels("aeiou"));      // 5
-
+ */
 
 // ---------- Problem 5: Multiplication Table ----------
 // Return a string showing the multiplication table from 1 to n,
 // one row per line (rows separated by "\n"). Each row shows n
 // products separated by spaces. Needs a loop inside a loop —
 // build each row as its own string before adding it to the result.
-function multiplicationTable(n) {
+/* function multiplicationTable(n) {
   
 
 }
 
 console.log(multiplicationTable(3));
 // "1 2 3\n2 4 6\n3 6 9"
-console.log(multiplicationTable(5));
+console.log(multiplicationTable(5)); */
+
+function slotMachines(q,fm,sm,tm) {
+  let plays = 0
+  while (0 < q) {
+    q -= 1;
+    fm += 1;
+    plays += 1;
+    if (fm % 35 === 0) {
+      q += 30;
+    } 
+    q -= 1;
+    sm += 1;
+    plays += 1;
+    if (sm % 100 === 0) {
+      q += 60;
+    } 
+    q -= 1;
+    tm += 1;
+    plays += 1;
+    if (tm % 10 === 0) {
+      q += 9;
+    } 
+    if (q < 0) {
+      break;
+    }
+  } 
+  return(`martha plays ${plays} times before going broke`)
+}
+
+console.log(slotMachines(77,4,9,3))
