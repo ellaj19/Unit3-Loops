@@ -93,28 +93,28 @@ function slotMachines(q,fm,sm,tm) {
   let plays = 0
   let currentMachine = 0
   while (0 < q) {
-    q -= 1;
-    fm += 1;
-    plays += 1;
     if (currentMachine === 0) {
+      q -= 1;
+      fm += 1;
+      plays += 1;
       currentMachine += 1
       if (fm % 35 === 0) {
         q += 30;
       }
     }
-    q -= 1;
-    sm += 1;
-    plays += 1;
     if (currentMachine === 1) {
+      q -= 1;
+      sm += 1;
+      plays += 1;
       currentMachine += 1
       if (sm % 100 === 0) {
         q += 60;
       } 
     }
-    q -= 1;
-    tm += 1;
-    plays += 1;
     if (currentMachine === 2) {
+      q -= 1;
+      tm += 1;
+      plays += 1;
       currentMachine += 1
       if (tm % 10 === 0) {
         q += 9;
